@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="ApparelMakeableBase">
+        <defName>Darkened_Robe</defName>
+        <label>Darkened Robe</label>
+        <description>A hood made from strange leather and infused with human flesh. Only the high ranking in the dark cult are permitted to wear it. Increases the psychic sensitivity of the user</description>
+        <graphicData>
+            <texPath>Apparel/Body/Darkened_Robe/Bloodied_Robe</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <costList>
+            <Leather_Dread>80</Leather_Dread>
+            <Meat_Human>35</Meat_Human>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>ComplexClothing</researchPrerequisite>
+
+            <recipeUsers>
+                <li>ElectricTailoringBench</li>
+                <li>HandTailoringBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <statBases>
+            <WorkToMake>15000</WorkToMake>
+            <Mass>1.2</Mass>
+            <MarketValue>150</MarketValue>
+            <MaxHitPoints>150</MaxHitPoints>
+        	<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.30</ArmorRating_Heat>
+			<Insulation_Cold>15</Insulation_Cold>
+			<Insulation_Heat>4</Insulation_Heat>
+        </statBases>
+        <equippedStatOffsets>
+            <SocialImpact>0.15</SocialImpact>
+            <PsychicSensitivity>0.25</PsychicSensitivity>
+        </equippedStatOffsets>
+
+        <apparel>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Shoulders</li>
+                <li>Arms</li>  
+            </bodyPartGroups>
+            <layers>
+                <li>Shell</li>
+            </layers>
+            <wornGraphicPath>Apparel/Body/Darkened_Robe/Bloodied_Robe</wornGraphicPath>
+            
+        </apparel>
+    </ThingDef>
+
+    <!--////////////////////////////////////////-->
+
+    <ThingDef ParentName="ApparelMakeableBase">
+        <defName>The_Last_Offering</defName>
+        <label>The last offering</label>
+        <description>A vest made of harness and barely stable boomalope sacks.Enough for a suicide attack against an enemy.Using this vest is almost often the last thing the person will do hence the name.</description>
+        <graphicData>
+            <texPath>Apparel/Body/Eye_Detonation_Vest/The_Last_Offering</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <costList>
+            <Leather_Dread>10</Leather_Dread>
+            <Chemfuel>25</Chemfuel>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>ComplexClothing</researchPrerequisite>
+
+            <recipeUsers>
+                <li>ElectricTailoringBench</li>
+                <li>HandTailoringBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <statBases>
+            <WorkToMake>3500</WorkToMake>
+            <Mass>2.5</Mass>
+            <MarketValue>5</MarketValue>
+            <MaxHitPoints>75</MaxHitPoints>
+        </statBases>
+        <apparel>
+            <bodyPartGroups>
+                <li>Torso</li>  
+            </bodyPartGroups>
+            <layers>
+                <li>Shell</li>
+            </layers>
+        <wornGraphicPath>Apparel/Body/Eye_Detonation_Vest/The_Last_Offering</wornGraphicPath>
+        </apparel>
+        <comps>
+            <li Class="CompProperties_CauseHediff_Apparel">
+                <hediff>The_Last_Offering</hediff>
+                <part>Torso</part>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

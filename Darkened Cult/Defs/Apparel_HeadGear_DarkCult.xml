@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!--Bloodied Hood-->
+    <ThingDef ParentName="HatMakeableBase">
+        <defName>Darkened_Hood</defName>
+        <label>Darkened Hood</label>
+        <description>A hood made from strange leather and human flesh. Only the high ranking cultists are permitted to wear it. Increases psychic sensitivity of the user</description>
+        <graphicData>
+            <texPath>Apparel/Head/Bloodied_Hood</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <costList>
+            <Leather_Dread>60</Leather_Dread>
+            <Meat_Human>20</Meat_Human>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>ComplexClothing</researchPrerequisite>
+
+            <recipeUsers>
+                <li>ElectricTailoringBench</li>
+                <li>HandTailoringBench</li>
+            </recipeUsers>
+        </recipeMaker>
+
+        <statBases>
+            <WorkToMake>10000</WorkToMake>
+            <Mass>1.2</Mass>
+            <MarketValue>50</MarketValue>
+            <MaxHitPoints>75</MaxHitPoints>
+			<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.20</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>3</Insulation_Heat>
+        </statBases>
+        <equippedStatOffsets>
+            <SocialImpact>0.15</SocialImpact>
+            <PsychicSensitivity>0.05</PsychicSensitivity>
+        </equippedStatOffsets>
+        <apparel>
+            <bodyPartGroups>
+                <li>FullHead</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <wornGraphicPath>Apparel/Head/Bloodied_Hood_Front</wornGraphicPath>
+            <drawData>
+                <dataNorth>
+                    <layer>100</layer>
+                </dataNorth>
+            </drawData>
+			<renderNodeProperties>
+                <li>
+                    <workerClass>PawnRenderNodeWorker_Apparel_Head</workerClass>
+					<texPath>Apparel/Head/Bloodied_Hood_Back</texPath>
+                    <parentTagDef>Head</parentTagDef>
+
+					<baseLayer>-50</baseLayer>
+				</li>
+			</renderNodeProperties>
+
+        </apparel>
+    </ThingDef>
+
+    <!--Eye Rag-->
+    <ThingDef ParentName="HatMakeableBase">
+        <defName>Blinding_Rag</defName>
+        <label>Blinding rag</label>
+        <description>A rag made for unwilling people to see with their true eye.Its pretty much worthless in all aspects</description>
+        <graphicData>
+            <texPath>Apparel/Head/Eye_Rag</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <costList>
+            <Leather_Dread>15</Leather_Dread>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>ComplexClothing</researchPrerequisite>
+        <recipeUsers>
+                <li>ElectricTailoringBench</li>
+                <li>HandTailoringBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <statBases>
+            <WorkToMake>2500</WorkToMake>
+            <Mass>0.5</Mass>
+            <MarketValue>10</MarketValue>
+            <MaxHitPoints>75</MaxHitPoints>
+			<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.2</ArmorRating_Heat>
+			<Insulation_Cold>7</Insulation_Cold>
+			<Insulation_Heat>3</Insulation_Heat>
+        </statBases>
+        <apparel>
+            <bodyPartGroups>
+                <li>FullHead</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <wornGraphicPath>Apparel/Head/Eye_Rag</wornGraphicPath>
+        </apparel>
+        <comps>
+            <li Class="CompProperties_CauseHediff_Apparel">
+                <hediff>Eye_Rag</hediff>
+                <part>Head</part>
+            </li>
+        </comps>
+        </ThingDef>
+</Defs>

@@ -1,0 +1,10 @@
+{
+  "TextureModID": "kolcio138.darkcult",
+  "ItemDefName": "Eye_Hook",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "Rotation": 45.0,
+  "BladeStart": 0.356821239,
+  "BladeEnd": 0.645023048,
+  "MeleeWeaponType": 4
+}

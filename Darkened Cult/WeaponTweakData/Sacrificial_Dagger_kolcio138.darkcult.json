@@ -1,0 +1,13 @@
+{
+  "TextureModID": "kolcio138.darkcult",
+  "ItemDefName": "Sacrificial_Dagger",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.148040637,
+  "OffY": 0.01161103,
+  "Rotation": 85.0,
+  "HandsMode": 1,
+  "BladeStart": 0.09259659,
+  "BladeEnd": 0.430574149,
+  "MeleeWeaponType": 6
+}

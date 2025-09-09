@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef Name='Plant_DarkTree' ParentName='TreeBase'>
+        <defName>Dark_Tree</defName>
+        <label>Dark tree</label>
+        <description>A strangely dark tree.It grows only a singular fruit.The cultists use the fruit to create crude implants for themself</description>
+        <graphicData>
+            <texPath>Plants/DarkTree</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shadowData>
+                <volume>(0.15, 0.3, 0.15)</volume>
+                <offset>(0,0,-0.38)</offset>
+            </shadowData>
+        </graphicData>
+        <selectable>true</selectable>
+        <statBases>
+            <Beauty>1</Beauty>
+            <BeautyOutdoors>1</BeautyOutdoors>
+            <Nutrition>1</Nutrition>
+        </statBases>
+        <minifiedDef IsNull="True" />
+        <ingestible />
+        <plant>
+            <dieIfLeafless>false</dieIfLeafless>
+            <growDays>30</growDays>
+            <visualSizeRange>1~2</visualSizeRange>
+            <sowMinSkill>5</sowMinSkill>
+            <sowTags>
+                <li>Ground</li>
+            </sowTags>
+            <topWindExposure>0.15</topWindExposure>
+            <mustBeWildToSow>false</mustBeWildToSow>
+            <immatureGraphicPath>Plants/DarkTreeImmature</immatureGraphicPath>
+            <snowOverlayGraphicPath>Plants/DarkTree</snowOverlayGraphicPath>
+            <immatureSnowOverlayGraphicPath>Plants/DarkTree</immatureSnowOverlayGraphicPath>
+            <harvestWork>500</harvestWork>
+            <harvestTag>Standard</harvestTag>
+            <forceIsTree>true</forceIsTree>
+            <harvestYield>1</harvestYield>
+            <harvestedThingDef>EyeFruit</harvestedThingDef> <!--!!!!!!!!!!!!!!!!-->
+            <harvestFailable>true</harvestFailable>
+        </plant>
+    </ThingDef>
+    <ThingDef ParentName="ResourceBase">
+        <defName>EyeFruit</defName>
+        <label>Eye fruit</label>
+        <description>A special fruit grown from a dark tree.the cultists use it for their strange practicies</description>
+        <graphicData>
+            <texPath>Plants/EyeFruit</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Standard_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <statBases>
+            <MaxHitPoints>25</MaxHitPoints>
+            <MarketValue>25</MarketValue>
+            <Mass>1</Mass>
+            <Flammability>1.0</Flammability>
+            <DeteriorationRate>8</DeteriorationRate>
+        </statBases>
+
+    </ThingDef>
+</Defs>

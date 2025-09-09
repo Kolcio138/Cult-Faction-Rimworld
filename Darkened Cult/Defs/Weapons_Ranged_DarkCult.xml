@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <DamageDef ParentName="Arrow">
+        <defName>ArrowThorn</defName>
+        <label>thorn arrow</label>
+            <additionalHediffs>
+                <li>
+                    <hediff>Thorns_Arrow</hediff>
+                    <severityPerDamageDealt>0.1</severityPerDamageDealt> <!-- how much severity gets applied on hit -->
+                </li>
+            </additionalHediffs>
+    </DamageDef>
+
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>Thorn_Arrow</defName>
+        <label>thorn arrow</label>
+        <graphicData>
+            <texPath>Weapons/ThornArrow</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>ArrowThorn</damageDef>
+            <damageAmountBase>6</damageAmountBase>
+            <speed>55</speed>
+        </projectile>
+    </ThingDef>
+
+    
+    <ThingDef ParentName="BaseWeaponNeolithic">
+        <defName>ThornBow</defName>
+        <label>Thorn bow</label>
+        <description>Bow with thorns</description>
+        <graphicData>
+            <texPath>Weapons/ThornBow</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>150</MarketValue>
+            <Mass>1.5</Mass>
+            <AccuracyTouch>0.70</AccuracyTouch>
+            <AccuracyShort>0.80</AccuracyShort>
+            <AccuracyMedium>0.92</AccuracyMedium>
+            <AccuracyLong>0.80</AccuracyLong>
+            <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>NeolithicRangedBasic</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>Ranged</li>
+            <li>RangedLight</li>
+        </weaponClasses>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Thorn_Arrow</defaultProjectile>
+                <warmupTime>1.35</warmupTime>
+                <range>25</range>
+                <soundCast>Bow_Small</soundCast>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>Thorn</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+
+</Defs>

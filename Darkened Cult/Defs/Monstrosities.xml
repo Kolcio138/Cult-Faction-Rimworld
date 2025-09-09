@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="BasePawn" Name="BaseMonstrosity" Abstract="True">
+        <race>
+            <needsRest>false</needsRest>
+            <hasGenders>false</hasGenders>
+            <foodType>None</foodType>
+            <lifeExpectancy>128</lifeExpectancy>
+            <thinkTreeMain>Animal</thinkTreeMain>
+            <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+            <leatherDef>Leather_Dread</leatherDef>
+            <hediffGiverSets>
+            <li>OrganicStandard</li>
+            </hediffGiverSets>
+        </race>
+    </ThingDef>
+
+    <PawnKindDef Name="BaseMutantKind" Abstract="True">
+        <defaultFactionType>Pirate</defaultFactionType>
+        <destroyGearOnDrop>true</destroyGearOnDrop>
+    </PawnKindDef>
+    <!--/////////////////////-->
+    <ThingDef ParentName="BaseMonstrosity">
+        <defName>Eyeless</defName>
+        <label>Eyeless</label>
+        <description>a guy with no sight but many eyes</description>
+        <statBases>
+            <MoveSpeed>2.5</MoveSpeed>
+            <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+        </statBases>
+        <tools>
+            <li>
+                <label>Head</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <cooldownTime>2.5</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>1</chanceFactor>
+            </li>
+        </tools>
+        <race>
+            <intelligence>ToolUser</intelligence>
+            <thinkTreeMain>Humanlike</thinkTreeMain>
+            <body>Human</body>
+            <baseBodySize>1.0</baseBodySize>
+            <baseHealthScale>1</baseHealthScale>
+            <lifeStageAges>
+                <li>
+                <def>AnimalAdult</def>
+                <minAge>0.1</minAge>
+                </li>
+            </lifeStageAges>
+            <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+        </race>
+    </ThingDef>
+    <!--/////////////////////////-->
+    <PawnKindDef ParentName="BaseMutantKind">
+        <defName>Cult_Eyeless</defName>
+        <label>Eyeless</label>
+        <defaultFactionType>Pirate</defaultFactionType>
+        <race>Eyeless</race>
+        <combatPower>35</combatPower>
+        <lifeStages>
+        <li>
+            <bodyGraphicData>
+            <texPath>Pawn/Eyeless</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>2</drawSize>
+            <shadowData>
+                <volume>(0.3, 0.8, 0.4)</volume>
+                <offset>(0,0,-0.45)</offset>
+            </shadowData>
+            </bodyGraphicData>
+        </li>
+        </lifeStages>
+        <abilities>
+            <li>Pounce_Eyeless</li>
+        </abilities>
+
+    </PawnKindDef>
+    <!--//////////////////-->
+    <AbilityDef>
+    <defName>Pounce_Eyeless</defName>
+    <label>EyelessPounce</label>
+    <description>Pounce of an eyeless</description>
+    <cooldownTicksRange>8200</cooldownTicksRange> <!-- 1.44 hours -->
+    <jobDef>CastJump</jobDef>
+    <ai_IsOffensive>true</ai_IsOffensive>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityConsumeLeap</verbClass>
+      <label>consume leap</label>
+      <range>15</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>Pawn_Devourer_Jump</soundCast>
+      <soundLanding>Pawn_Devourer_Land</soundLanding>
+      <targetParams>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+</Defs>

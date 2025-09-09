@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+        <defName>Sacrificial_Dagger</defName>
+        <label>Sightstealer</label>
+        <description>A dagger used mostly to cut out eyes of the unwilling.</description>
+        <graphicData>
+            <texPath>Weapons/Sacrificial_Dagger</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <statBases>
+            <WorkToMake>8500</WorkToMake>
+            <Mass>0.75</Mass>
+        </statBases>
+
+        <costStuffCount>35</costStuffCount>
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+
+        <tools>
+            <li>
+                <label>left edge</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>1.5</cooldownTime>
+                <armorPenetration>0.05</armorPenetration>
+            </li>
+            <li>
+                <label>right edge</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>1.5</cooldownTime>
+                <armorPenetration>0.1</armorPenetration>
+            </li>
+        </tools>
+
+        <recipeMaker>
+            <researchPrerequisite>Smithing</researchPrerequisite>
+        </recipeMaker>
+    </ThingDef>
+
+        <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+        <defName>Eye_Hook</defName>
+        <label>Eye hook</label>
+        <description>A hook used to rip out peoples eyes</description>
+        <graphicData>
+            <texPath>Weapons/Eyehook</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <statBases>
+            <WorkToMake>13500</WorkToMake>
+            <Mass>2.5</Mass>
+        </statBases>
+
+        <costStuffCount>75</costStuffCount>
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <tools>
+            <li>
+                <label>hook</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>11</power>
+                <cooldownTime>2.5</cooldownTime>
+                <armorPenetration>0.25</armorPenetration>
+            </li>
+        </tools>
+        <recipeMaker>
+            <researchPrerequisite>Smithing</researchPrerequisite>
+        </recipeMaker>
+    </ThingDef>
+</Defs>

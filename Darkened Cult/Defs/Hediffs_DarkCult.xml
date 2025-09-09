@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <HediffDef>
+        <defName>Eye_Rag</defName>
+        <label>Eye rag</label>
+        <description>A rag put over someones head.it makes seeing nigh impossible</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <setMax>0.05</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_RemoveIfApparelDropped" />
+        </comps>
+        <isBad>false</isBad>
+    </HediffDef>
+    
+
+    <HediffDef>
+        <defName>The_Last_Offering</defName>
+        <label>The last offering</label>
+        <description>A vest made of boomalope sacks was put on this person.when he dies they will explode violently</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <comps>
+            <li Class="HediffCompProperties_RemoveIfApparelDropped" />
+            <li Class="HediffCompProperties_ExplodeOnDeath">
+            <explosionRadius>3.5</explosionRadius>
+                <damageDef>Bomb</damageDef>
+                <damageAmount>23</damageAmount>
+                <destroyGear>true</destroyGear>
+                <destroyBody>false</destroyBody>
+            </li>
+        </comps>
+        <isBad>false</isBad>
+    </HediffDef>
+
+
+    <HediffDef>
+        <defName>Thorns_Arrow</defName>
+        <label>Thorned arrow</label>
+        <description>A thorn from an arrow has lodged inside this person.Everything hurts more!</description>
+        <isBad>true</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+          <stages>
+            <li>
+                <statOffsets>
+                    <PainShockThreshold>-0.15</PainShockThreshold>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+</Defs>
